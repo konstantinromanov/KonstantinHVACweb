@@ -118,8 +118,8 @@ html {
 .carousel-caption {
     position: absolute;
     top: 50%;
-    transform: translateY(-50%);
-    text-transform: uppercase;
+    transform: translateY(-40%);
+    /*text-transform: uppercase;*/
 }
 
 .bg-custom {
@@ -129,7 +129,7 @@ html {
 }
 
 .carousel-caption h1 {
-    font-size: 3.8rem;
+    font-size: 3rem;
     text-shadow: .1rem .1rem .3rem rgba(0, 0, 0, 1)
 }
 
@@ -138,13 +138,13 @@ html {
 }
 
 .carousel-caption h3 {
-    font-size: 2.2rem;
+    font-size: 1.8rem;
     text-shadow: .1rem .1rem .2rem rgba(0, 0, 0, 1)
 }
 
 .btn-lg {
     border-radius: 0;
-    text-transform: uppercase;
+    /*text-transform: uppercase;*/
     font-size: 1rem;
     border-width: medium;
 }
@@ -177,8 +177,32 @@ html {
 }
 
 .fixed-background {
+    height: 300px;
     padding: 5rem 0;
     z-index: 1;
+}
+
+
+/*==== SECTIONS====*/
+
+
+.dummy {
+    padding-top: 70px;
+    height: 1000px;
+}
+
+.about, .projects, .contact {
+    padding-top: 70px;
+    min-height: 84vh;
+}
+
+.services {
+    padding-top: 70px;
+}
+
+.vl {
+    border-left: 6px solid #4981b3;
+    height: auto;
 }
 
 /*-- Emoji Navbar --*/

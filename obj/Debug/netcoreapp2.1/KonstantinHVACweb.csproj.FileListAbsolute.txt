@@ -20,7 +20,6 @@ C:\Users\Konstantin\source\repos\KonstantinHVACweb\KonstantinHVACweb\obj\Debug\n
 C:\Users\Konstantin\source\repos\KonstantinHVACweb\KonstantinHVACweb\obj\Debug\netcoreapp2.1\Razor\Views\Home\About.cshtml.g.cs
 C:\Users\Konstantin\source\repos\KonstantinHVACweb\KonstantinHVACweb\obj\Debug\netcoreapp2.1\Razor\Views\Home\Contact.cshtml.g.cs
 C:\Users\Konstantin\source\repos\KonstantinHVACweb\KonstantinHVACweb\obj\Debug\netcoreapp2.1\Razor\Views\Home\Index.cshtml.g.cs
-C:\Users\Konstantin\source\repos\KonstantinHVACweb\KonstantinHVACweb\obj\Debug\netcoreapp2.1\Razor\Views\Home\Privacy.cshtml.g.cs
 C:\Users\Konstantin\source\repos\KonstantinHVACweb\KonstantinHVACweb\obj\Debug\netcoreapp2.1\Razor\Views\Shared\Error.cshtml.g.cs
 C:\Users\Konstantin\source\repos\KonstantinHVACweb\KonstantinHVACweb\obj\Debug\netcoreapp2.1\Razor\Views\Shared\_CookieConsentPartial.cshtml.g.cs
 C:\Users\Konstantin\source\repos\KonstantinHVACweb\KonstantinHVACweb\obj\Debug\netcoreapp2.1\Razor\Views\Shared\_Layout.cshtml.g.cs
@@ -34,3 +33,5 @@ C:\Users\Konstantin\source\repos\KonstantinHVACweb\KonstantinHVACweb\obj\Debug\n
 C:\Users\Konstantin\source\repos\KonstantinHVACweb\KonstantinHVACweb\obj\Debug\netcoreapp2.1\KonstantinHVACweb.pdb
 C:\Users\Konstantin\source\repos\KonstantinHVACweb\KonstantinHVACweb\obj\Debug\netcoreapp2.1\KonstantinHVACweb.genruntimeconfig.cache
 C:\Users\Konstantin\source\repos\KonstantinHVACweb\KonstantinHVACweb\obj\Debug\netcoreapp2.1\KonstantinHVACweb.csproj.CopyComplete
+C:\Users\Konstantin\source\repos\KonstantinHVACweb\KonstantinHVACweb\obj\Debug\netcoreapp2.1\Razor\Views\Home\Services.cshtml.g.cs
+C:\Users\Konstantin\source\repos\KonstantinHVACweb\KonstantinHVACweb\obj\Debug\netcoreapp2.1\Razor\Views\Home\Projects.cshtml.g.cs

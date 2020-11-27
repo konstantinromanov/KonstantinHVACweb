@@ -29,10 +29,20 @@ namespace KonstantinHVACweb.Controllers
             return View();
         }
 
-        public IActionResult Privacy()
+        public IActionResult Services()
         {
+            ViewData["Message"] = "Your Services page.";
+
             return View();
         }
+
+        public IActionResult Projects()
+        {
+            ViewData["Message"] = "Your Project's page.";
+
+            return View();
+        }
+
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
@@ -41,3 +51,5 @@ namespace KonstantinHVACweb.Controllers
         }
     }
 }
+
+
