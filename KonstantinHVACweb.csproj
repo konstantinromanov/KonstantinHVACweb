@@ -4,13 +4,7 @@
     <TargetFramework>net5.0</TargetFramework>
     <StartupObject></StartupObject>
     <ApplicationIcon>favicon.ico</ApplicationIcon>
+    <UserSecretsId>95ce1fc2-21a2-4101-b610-2fc8770e5460</UserSecretsId>
   </PropertyGroup>
-
-  <ItemGroup>
-    
-    
-    
-    <PackageReference Include="Microsoft.NET.Sdk.Razor" Version="3.1.10" />
-  </ItemGroup>
 
 </Project>

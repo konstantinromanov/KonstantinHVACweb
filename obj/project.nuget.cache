@@ -1,10 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "ZLryz8fmUZHmObFxB6OQJPPDIk4p70JNlmV3xsYhFdtG+xdVndyDMQ1BDdHBpdzGWzRlyBew0/8103LN76iEiQ==",
+  "dgSpecHash": "YqhjQ4trHXZFhxSJ3ZBeC4SvcIK5ZeCL3qVXb7vPr0JxpfeLQAKNYQHMhrMEMxMsF8M5Z1ejmaSsqw9laMxKhQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\Konstantin\\source\\repos\\KonstantinHVACweb\\KonstantinHVACweb\\KonstantinHVACweb.csproj",
-  "expectedPackageFiles": [
-    "C:\\Users\\Konstantin\\.nuget\\packages\\microsoft.net.sdk.razor\\3.1.10\\microsoft.net.sdk.razor.3.1.10.nupkg.sha512"
-  ],
+  "expectedPackageFiles": [],
   "logs": []
 }
