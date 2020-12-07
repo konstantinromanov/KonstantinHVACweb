@@ -4,7 +4,8 @@
 
 /.vs/KonstantinHVACweb/v16/TestStore/0
 obj/*
-bin/*
+bin/Debug/*
+bin/Release/*
 .vs/KonstantinHVACweb/config/applicationhost.config
 .vs/KonstantinHVACweb/DesignTimeBuild/.dtbcache.v2
 .vs/KonstantinHVACweb/v16/.suo
