@@ -165,7 +165,7 @@ html {
 /*===== FIXED BACKGROUND IMG =====*/
 
 .fixed {
-    background: url('../img/drawing2.jpg') rgba(50, 50, 50, 0.7);
+    background: url('../content/images/drawing2.jpg') rgba(50, 50, 50, 0.7);
     position: fixed;
     opacity: 0.6;
     background-blend-mode: multiply;
