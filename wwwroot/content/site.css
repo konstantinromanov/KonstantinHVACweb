@@ -176,6 +176,8 @@ html {
 .fixed-background {
     height: 300px;
     padding: 5rem 0;
+    border-top: .1rem solid #4981b3;
+    border-bottom: .1rem solid #4981b3;
     z-index: 1;
 }
 
