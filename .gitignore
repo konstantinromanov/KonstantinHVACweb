@@ -3,3 +3,8 @@
 ################################################################################
 
 /.vs/KonstantinHVACweb/v16/TestStore/0
+obj/*
+bin/*
+.vs/KonstantinHVACweb/config/applicationhost.config
+.vs/KonstantinHVACweb/DesignTimeBuild/.dtbcache.v2
+.vs/KonstantinHVACweb/v16/.suo
