@@ -49,6 +49,8 @@ namespace KonstantinHVACweb
                 app.UseHsts();
             }
 
+            app.UseStatusCodePagesWithRedirects("/Home/Error?errorCode={0}");
+
             app.UseHttpsRedirection();
             app.UseStaticFiles();
             app.UseCookiePolicy();
