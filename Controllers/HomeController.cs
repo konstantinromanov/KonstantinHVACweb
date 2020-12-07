@@ -12,35 +12,35 @@ namespace KonstantinHVACweb.Controllers
     {
         public IActionResult Index()
         {
-            return View();
+            return View("~/Views/lv/Home/Index.cshtml");
         }
 
         public IActionResult About()
         {
             ViewData["Message"] = "Your application description page.";
 
-            return View();
+            return View("~/Views/lv/Home/About.cshtml");
         }
 
         public IActionResult Contact()
         {
             ViewData["Message"] = "Your contact page.";
 
-            return View();
+            return View("~/Views/lv/Home/Contact.cshtml");
         }
 
         public IActionResult Services()
         {
             ViewData["Message"] = "Your Services page.";
 
-            return View();
+            return View("~/Views/lv/Home/Services.cshtml");
         }
 
         public IActionResult Projects()
         {
             ViewData["Message"] = "Your Project's page.";
 
-            return View();
+            return View("~/Views/lv/Home/Projects.cshtml");
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
