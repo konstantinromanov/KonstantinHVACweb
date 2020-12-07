@@ -2,10 +2,7 @@
 # This .gitignore file was automatically created by Microsoft(R) Visual Studio.
 ################################################################################
 
-/.vs/KonstantinHVACweb/v16/TestStore/0
+.vs/*
 obj/*
 bin/Debug/*
 bin/Release/*
-.vs/KonstantinHVACweb/config/applicationhost.config
-.vs/KonstantinHVACweb/DesignTimeBuild/.dtbcache.v2
-.vs/KonstantinHVACweb/v16/.suo
