@@ -37,7 +37,27 @@
                     <li class="nav-item"><a class="nav-link @(ViewBag.Current == "Services" ? "active" : "")" href="@Url.Action("Services","Home")" target="_self">Services</a></li>
                     <li class="nav-item"><a class="nav-link @(ViewBag.Current == "Projects" ? "active" : "")" href="@Url.Action("Projects","Home")" target="_self">Projects</a></li>
                     <li class="nav-item"><a class="nav-link @(ViewBag.Current == "Contact" ? "active" : "")" href="@Url.Action("Contact","Home")" target="_self">Contact Us</a></li>
+                    @*<li class="nav-item">
+                            <select class="custom-select" id="inputGroupSelect01">
+                                <option value="LV"><a href="#">LV</a></option>
+                                <option value="EN"><a href="#">EN</a></option>
+                            </select>
+                        </li>*@
                 </ul>
+
+                <ul class="navbar-nav right-nav-container">
+                    <div class="dropdown show">
+                        <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="false" aria-expanded="false">
+                            EN
+                        </a>
+
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                            <a class="nav-link" href="#">LV</a>
+                            
+                        </div>
+                    </div>
+                </ul>
+
             </div>
 
         </div>
@@ -77,8 +97,10 @@
         $(document).ready(function () {
             $(window).scroll(function () {
                 $('nav').toggleClass('scrolled', $(this).scrollTop() > 100);
+                $('ul').toggleClass('scrolled', $(this).scrollTop() > 100);
             });
-        });</script>
+        });
+    </script>
 
 
     <!-- End Script Source Files -->
