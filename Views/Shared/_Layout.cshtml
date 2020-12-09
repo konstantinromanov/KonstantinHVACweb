@@ -20,48 +20,9 @@
     @*<partial name="_CookieConsentPartial" />*@
 
     <!-- Navigation -->
-    <nav class="navbar bg-dark navbar-dark navbar-expand-lg fixed-top">
 
-        <div class="container">
+    @Html.Partial("_NavbarLv")
 
-            <a asp-controller="Home" asp-action="Index" class="navbar-brand"><img src="~/content/images/avk_dizains_logo.svg" alt="HVAC" title="HVAC" /></a>
-
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-
-            <div class="collapse navbar-collapse" id="navbarResponsive">
-                <ul class="navbar-nav ml-auto">
-                    <li class="nav-item"><a class="nav-link @(ViewBag.Current == "Index" ? "active" : "")" href="@Url.Action("Index","Home")" target="_self">Home</a></li>
-                    <li class="nav-item"><a class="nav-link @(ViewBag.Current == "About" ? "active" : "")" href="@Url.Action("About","Home")" target="_self">About</a></li>
-                    <li class="nav-item"><a class="nav-link @(ViewBag.Current == "Services" ? "active" : "")" href="@Url.Action("Services","Home")" target="_self">Services</a></li>
-                    <li class="nav-item"><a class="nav-link @(ViewBag.Current == "Projects" ? "active" : "")" href="@Url.Action("Projects","Home")" target="_self">Projects</a></li>
-                    <li class="nav-item"><a class="nav-link @(ViewBag.Current == "Contact" ? "active" : "")" href="@Url.Action("Contact","Home")" target="_self">Contact Us</a></li>
-                    @*<li class="nav-item">
-                            <select class="custom-select" id="inputGroupSelect01">
-                                <option value="LV"><a href="#">LV</a></option>
-                                <option value="EN"><a href="#">EN</a></option>
-                            </select>
-                        </li>*@
-                </ul>
-
-                <ul class="navbar-nav right-nav-container">
-                    <div class="dropdown show">
-                        <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="false" aria-expanded="false">
-                            EN
-                        </a>
-
-                        <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                            <a class="nav-link" href="#">LV</a>
-                            
-                        </div>
-                    </div>
-                </ul>
-
-            </div>
-
-        </div>
-    </nav>
     <!-- End Navigation -->
 
     <div id="main">
