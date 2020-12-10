@@ -68,10 +68,26 @@ html {
         text-decoration: none;
     }
 
-.dropdown-menu {
-    background-color: rgba(100,100, 100, 0.4);
-    min-width: 10px !important;
+.navbar-nav select:hover {
+    color: #4981b3 !important;
 }
+/*.navbar-nav select !options:hover {
+    color: white !important;
+}*/
+
+
+.navbar-nav select {
+    font-size: 1.15rem;
+    font-weight: 600;
+    letter-spacing: .1rem;
+    color: white;
+    background-color: transparent;
+    border: none;
+}
+
+    .navbar-nav select option {
+        background: rgba(0, 0, 0, 0.3);
+    }
 
 /*===navbar transparent to solid===*/
 
@@ -105,11 +121,13 @@ html {
             transition-delay: 0s;
         }
 
-.navbar-nav.scrolled a {
+.navbar-nav.scrolled select {
     color: #5b5555 !important;
 }
 
-
+    .navbar-nav.scrolled select:hover {
+        color: #4981b3 !important;
+    }
 
 /*============= CAROUSEL =============*/
 #carousel {

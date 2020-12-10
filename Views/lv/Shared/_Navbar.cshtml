@@ -10,14 +10,14 @@
         }
         <div class="collapse navbar-collapse" id="navbarResponsive">
             <ul class="navbar-nav ml-auto">
-                <li class="nav-item"><a class="nav-link @((path == "/" || path.Contains("index")) ? "active" : "")" href="@Url.Action("Index","Home")" target="_self">Home</a></li>
-                <li class="nav-item"><a class="nav-link @(path.Contains("about") ? "active" : "")" href="@Url.Action("About","Home")" target="_self">About</a></li>
-                <li class="nav-item"><a class="nav-link @(path.Contains("services") ? "active" : "")" href="@Url.Action("Services","Home")" target="_self">Services</a></li>
-                <li class="nav-item"><a class="nav-link @(path.Contains("projects") ? "active" : "")" href="@Url.Action("Projects","Home")" target="_self">Projects</a></li>
-                <li class="nav-item"><a class="nav-link @(path.Contains("contact") ? "active" : "")" href="@Url.Action("Contact","Home")" target="_self">Contact Us</a></li>
+                <li class="nav-item"><a class="nav-link @((path == "/" || path.Contains("index")) ? "active" : "")" href="@Url.Action("Index","Home")" target="_self">Sākums</a></li>
+                <li class="nav-item"><a class="nav-link @(path.Contains("about") ? "active" : "")" href="@Url.Action("About","Home")" target="_self">Par mums</a></li>
+                <li class="nav-item"><a class="nav-link @(path.Contains("services") ? "active" : "")" href="@Url.Action("Services","Home")" target="_self">Pakalpojumi</a></li>
+                <li class="nav-item"><a class="nav-link @(path.Contains("projects") ? "active" : "")" href="@Url.Action("Projects","Home")" target="_self">Projekti</a></li>
+                <li class="nav-item"><a class="nav-link @(path.Contains("contact") ? "active" : "")" href="@Url.Action("Contact","Home")" target="_self">Kontakti</a></li>
             </ul>
 
-            <ul class="navbar-nav right-nav-container">
+            <ul class="navbar-nav right-nav-container px-3">
                 <select class="Language language" id="Language" name="Language">
                     @foreach (var language in Language.AllLanguages.OrderBy(z => z.Name).ToList())
                     {
