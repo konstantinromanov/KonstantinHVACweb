@@ -21,7 +21,7 @@
 
     <!-- Navigation -->
 
-    @Html.Partial("_NavbarLv")
+    @await Html.PartialAsync($"~/Views/{Identity.User.Language.IsoCode}/Shared/_Navbar.cshtml")
 
     <!-- End Navigation -->
 
@@ -61,8 +61,20 @@
                 $('ul').toggleClass('scrolled', $(this).scrollTop() > 100);
             });
         });
-    </script>
 
+    $(".Language").on("change", (event) => {
+      $.ajax({
+        type: "POST",
+        url: "@Url.Action("ChangeLanguage", "Home")",
+        data: {
+          languageIsoCode: event.target.value
+        },
+        success: (data) => {
+          location.reload();
+        }
+      });
+    });
+    </script>
 
     <!-- End Script Source Files -->
     @RenderSection("Scripts", required: false)

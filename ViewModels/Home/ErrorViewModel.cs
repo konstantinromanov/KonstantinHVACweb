@@ -1,4 +1,4 @@
-namespace KonstantinHVACweb.Models
+namespace KonstantinHVACweb.ViewModels.Home
 {
     public class ErrorViewModel
     {

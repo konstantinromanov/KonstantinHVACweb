@@ -1,47 +1,30 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
-@{
-}
-<nav class="navbar bg-dark navbar-dark navbar-expand-lg fixed-top">
-
+﻿<nav class="navbar bg-dark navbar-dark navbar-expand-lg fixed-top">
     <div class="container">
-
         <a asp-controller="Home" asp-action="Index" class="navbar-brand"><img src="~/content/images/avk_dizains_logo.svg" alt="HVAC" title="HVAC" /></a>
 
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
             <span class="navbar-toggler-icon"></span>
         </button>
-
+        @{ 
+            var path = Context.Request.Path.Value.MyToStringTrimLower();
+        }
         <div class="collapse navbar-collapse" id="navbarResponsive">
             <ul class="navbar-nav ml-auto">
-                <li class="nav-item"><a class="nav-link @(ViewBag.Current == "Index" ? "active" : "")" href="@Url.Action("Index","Home")" target="_self">Home</a></li>
-                <li class="nav-item"><a class="nav-link @(ViewBag.Current == "About" ? "active" : "")" href="@Url.Action("About","Home")" target="_self">About</a></li>
-                <li class="nav-item"><a class="nav-link @(ViewBag.Current == "Services" ? "active" : "")" href="@Url.Action("Services","Home")" target="_self">Services</a></li>
-                <li class="nav-item"><a class="nav-link @(ViewBag.Current == "Projects" ? "active" : "")" href="@Url.Action("Projects","Home")" target="_self">Projects</a></li>
-                <li class="nav-item"><a class="nav-link @(ViewBag.Current == "Contact" ? "active" : "")" href="@Url.Action("Contact","Home")" target="_self">Contact Us</a></li>
-                @*<li class="nav-item">
-                        <select class="custom-select" id="inputGroupSelect01">
-                            <option value="LV"><a href="#">LV</a></option>
-                            <option value="EN"><a href="#">EN</a></option>
-                        </select>
-                    </li>*@
+                <li class="nav-item"><a class="nav-link @((path == "/" || path.Contains("index")) ? "active" : "")" href="@Url.Action("Index","Home")" target="_self">Home</a></li>
+                <li class="nav-item"><a class="nav-link @(path.Contains("about") ? "active" : "")" href="@Url.Action("About","Home")" target="_self">About</a></li>
+                <li class="nav-item"><a class="nav-link @(path.Contains("services") ? "active" : "")" href="@Url.Action("Services","Home")" target="_self">Services</a></li>
+                <li class="nav-item"><a class="nav-link @(path.Contains("projects") ? "active" : "")" href="@Url.Action("Projects","Home")" target="_self">Projects</a></li>
+                <li class="nav-item"><a class="nav-link @(path.Contains("contact") ? "active" : "")" href="@Url.Action("Contact","Home")" target="_self">Contact Us</a></li>
             </ul>
 
             <ul class="navbar-nav right-nav-container">
-                <div class="dropdown show">
-                    <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="false" aria-expanded="false">
-                        EN
-                    </a>
-
-                    <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                        <a class="nav-link" href="#">LV</a>
-
-                    </div>
-                </div>
+                <select class="Language language" id="Language" name="Language">
+                    @foreach (var language in Language.AllLanguages.OrderBy(z => z.Name).ToList())
+                    {
+                        <!option value="@language.IsoCode" @(language.Id == Identity.User.Language.Id ? "selected" : "")>@language.Name</!option>
+                    }
+                </select>
             </ul>
-
         </div>
-
     </div>
 </nav>
