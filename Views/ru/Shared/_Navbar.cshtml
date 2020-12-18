@@ -1,0 +1,30 @@
+﻿<nav class="navbar bg-dark navbar-dark navbar-expand-lg fixed-top">
+    <div class="container">
+        <a asp-controller="Home" asp-action="Index" class="navbar-brand"><img src="~/content/images/avk_dizains_logo.svg" alt="HVAC" title="HVAC" /></a>
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        @{ 
+            var path = Context.Request.Path.Value.MyToStringTrimLower();
+        }
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item"><a class="nav-link @((path == "/" || path.Contains("index")) ? "active" : "")" href="@Url.Action("Index","Home")" target="_self">Начало</a></li>
+                <li class="nav-item"><a class="nav-link @(path.Contains("about") ? "active" : "")" href="@Url.Action("About","Home")" target="_self">О нас</a></li>
+                <li class="nav-item"><a class="nav-link @(path.Contains("services") ? "active" : "")" href="@Url.Action("Services","Home")" target="_self">Услуги</a></li>
+                <li class="nav-item"><a class="nav-link @(path.Contains("projects") ? "active" : "")" href="@Url.Action("Projects","Home")" target="_self">Проекты</a></li>
+                <li class="nav-item"><a class="nav-link @(path.Contains("contact") ? "active" : "")" href="@Url.Action("Contact","Home")" target="_self">Контакты</a></li>
+            </ul>
+
+            <ul class="navbar-nav right-nav-container px-3">
+                <select class="Language language" id="Language" name="Language">
+                    @foreach (var language in Language.AllLanguages.OrderBy(z => z.Name).ToList())
+                    {
+                        <!option value="@language.IsoCode" @(language.Id == Identity.User.Language.Id ? "selected" : "")>@language.Name</!option>
+                    }
+                </select>
+            </ul>
+        </div>
+    </div>
+</nav>

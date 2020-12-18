@@ -10,6 +10,8 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.DependencyInjection.Extensions;
 using Microsoft.Extensions.Hosting;
 using System.Linq;
+using Microsoft.AspNetCore.Rewrite;
+
 
 namespace KonstantinHVACweb
 {
@@ -40,6 +42,12 @@ namespace KonstantinHVACweb
             {
                 app.UseExceptionHandler("/Home/Error");
                 app.UseHsts();
+            }
+
+            {
+                app.UseRewriter(new RewriteOptions()
+                    .AddRedirectToWwwPermanent()
+                    );
             }
 
             app.UseStatusCodePagesWithRedirects("/Home/Error?errorCode={0}");
