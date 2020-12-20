@@ -55,12 +55,12 @@
 	<script src="~/scripts/fontawesome/fontawesome.js"></script>
 
 	<script>
-				$(document).ready(function () {
-						$(window).scroll(function () {
-								$('nav').toggleClass('scrolled', $(this).scrollTop() > 100);
-								$('ul').toggleClass('scrolled', $(this).scrollTop() > 100);
-						});
-				});
+		$(document).ready(function () {
+			$(window).scroll(function () {
+				$('nav').toggleClass('scrolled', $(this).scrollTop() > 100);
+				$('ul').toggleClass('scrolled', $(this).scrollTop() > 100);
+			});
+		});
 
 		$(".Language").on("change", (event) => {
 			$.ajax({
@@ -75,26 +75,14 @@
 			});
 		});
 
+		$(document).ready(function () {
+			$('#myBtn').click(function () {
+				$('.bg-dark').toggleClass('super');
+			});
+		});
 
 	</script>
 
-	<script>
-		document.getElementById("myBtn").addEventListener("click", toggleNav);
-
-		let toggleNavStatus = false;
-		function toggleNav() {
-
-			let getToggle = document.querySelector(".bg-dark");
-
-			if (toggleNavStatus == false) {
-				getToggle.className += " super";
-				toggleNavStatus = true;
-			} else if (toggleNavStatus == true) {
-				getToggle.classList.remove('super');
-				toggleNavStatus = false;
-			}
-		}
-	</script>
 	<!-- End Script Source Files -->
 	@RenderSection("Scripts", required: false)
 </body>
