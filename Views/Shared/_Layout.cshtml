@@ -1,82 +1,101 @@
 ﻿<!DOCTYPE html>
 <html>
 <head>
-    <meta charset="utf-8" />
+	<meta charset="utf-8" />
 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
 
-    <title>@ViewData["Title"] | AVK Dizains</title>
+	<title>@ViewData["Title"] | AVK Dizains</title>
 
-    <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+	<link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
 
-    <link href="~/content/css/bootstrap/bootstrap.css" rel="stylesheet" asp-append-version="true" />
-    <link href="~/content/site.css" rel="stylesheet" asp-append-version="true" />
+	<link href="~/content/css/bootstrap/bootstrap.css" rel="stylesheet" asp-append-version="true" />
+	<link href="~/content/site.css" rel="stylesheet" asp-append-version="true" />
 
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700&display=swap" rel="stylesheet">
+	<!-- Google Fonts -->
+	<link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700&display=swap" rel="stylesheet">
 </head>
 <body>
 
-    @*<partial name="_CookieConsentPartial" />*@
+	@*<partial name="_CookieConsentPartial" />*@
 
-    <!-- Navigation -->
+	<!-- Navigation -->
 
-    @await Html.PartialAsync($"~/Views/{Identity.User.Language.IsoCode}/Shared/_Navbar.cshtml")
+	@await Html.PartialAsync($"~/Views/{Identity.User.Language.IsoCode}/Shared/_Navbar.cshtml")
 
-    <!-- End Navigation -->
+	<!-- End Navigation -->
 
-    <div id="main">
-        @RenderBody()
-    </div>
+	<div id="main">
+		@RenderBody()
+	</div>
 
-    <!-- Start Footer -->
+	<!-- Start Footer -->
 
-    <footer>
-        <div class="container">
-            <div class="row text-light text-center py-2 justify-content-center">
+	<footer>
+		<div class="container">
+			<div class="row text-light text-center py-2 justify-content-center">
 
-                <div class="col-sm-10 col-md-8 col-lg-6">
-                    <img src="~/content/images/avk_dizains_logo.svg" alt="" />
-                    <p>AVK Dizains, Riga, Latvia, <a href="mailto:&#107;&#111;&#110;&#115;&#116;&#97;&#110;&#116;&#105;&#110;&#115;&#64;&#97;&#118;&#107;&#100;&#105;&#122;&#97;&#105;&#110;&#115;&#46;&#108;&#118;">&#107;&#111;&#110;&#115;&#116;&#97;&#110;&#116;&#105;&#110;&#115;&#64;&#97;&#118;&#107;&#100;&#105;&#122;&#97;&#105;&#110;&#115;&#46;&#108;&#118;</a></p>
-                    <ul class="social pt-3">
-                        <li><a href="" target="_blank"><i class="fab fa-facebook"></i></a></li>
-                        <li><a href="" target="_blank"><i class="fab fa-twitter"></i></a></li>
-                        <li><a href="" target="_blank"><i class="fab fa-instagram"></i></a></li>
-                        <li><a href="" target="_blank"><i class="fab fa-youtube"></i></a></li>
-                    </ul>
-                </div>
+				<div class="col-sm-10 col-md-8 col-lg-6">
+					<img src="~/content/images/avk_dizains_logo.svg" alt="" />
+					<p>AVK Dizains, Riga, Latvia, <a href="mailto:&#107;&#111;&#110;&#115;&#116;&#97;&#110;&#116;&#105;&#110;&#115;&#64;&#97;&#118;&#107;&#100;&#105;&#122;&#97;&#105;&#110;&#115;&#46;&#108;&#118;">&#107;&#111;&#110;&#115;&#116;&#97;&#110;&#116;&#105;&#110;&#115;&#64;&#97;&#118;&#107;&#100;&#105;&#122;&#97;&#105;&#110;&#115;&#46;&#108;&#118;</a></p>
+					<ul class="social pt-3">
+						<li><a href="" target="_blank"><i class="fab fa-facebook"></i></a></li>
+						<li><a href="" target="_blank"><i class="fab fa-twitter"></i></a></li>
+						<li><a href="" target="_blank"><i class="fab fa-instagram"></i></a></li>
+						<li><a href="" target="_blank"><i class="fab fa-youtube"></i></a></li>
+					</ul>
+				</div>
 
-            </div>
-        </div>
-    </footer>
+			</div>
+		</div>
+	</footer>
 
-    <script src="~/scripts/jquery/jquery-3.5.1.js"></script>
-    <script src="~/scripts/bootstrap/bootstrap.js"></script>
-    <script src="~/scripts/fontawesome/fontawesome.js"></script>
+	<script src="~/scripts/jquery/jquery-3.5.1.js"></script>
+	<script src="~/scripts/bootstrap/bootstrap.js"></script>
+	<script src="~/scripts/fontawesome/fontawesome.js"></script>
 
-    <script>
-        $(document).ready(function () {
-            $(window).scroll(function () {
-                $('nav').toggleClass('scrolled', $(this).scrollTop() > 100);
-                $('ul').toggleClass('scrolled', $(this).scrollTop() > 100);
-            });
-        });
+	<script>
+				$(document).ready(function () {
+						$(window).scroll(function () {
+								$('nav').toggleClass('scrolled', $(this).scrollTop() > 100);
+								$('ul').toggleClass('scrolled', $(this).scrollTop() > 100);
+						});
+				});
 
-    $(".Language").on("change", (event) => {
-      $.ajax({
-        type: "POST",
-        url: "@Url.Action("ChangeLanguage", "Home")",
-        data: {
-          languageIsoCode: event.target.value
-        },
-        success: (data) => {
-          location.reload();
-        }
-      });
-    });
-    </script>
+		$(".Language").on("change", (event) => {
+			$.ajax({
+				type: "POST",
+				url: "@Url.Action("ChangeLanguage", "Home")",
+				data: {
+					languageIsoCode: event.target.value
+				},
+				success: (data) => {
+					location.reload();
+				}
+			});
+		});
 
-    <!-- End Script Source Files -->
-    @RenderSection("Scripts", required: false)
+
+	</script>
+
+	<script>
+		document.getElementById("myBtn").addEventListener("click", toggleNav);
+
+		let toggleNavStatus = false;
+		function toggleNav() {
+
+			let getToggle = document.querySelector(".bg-dark");
+
+			if (toggleNavStatus == false) {
+				getToggle.className += " super";
+				toggleNavStatus = true;
+			} else if (toggleNavStatus == true) {
+				getToggle.classList.remove('super');
+				toggleNavStatus = false;
+			}
+		}
+	</script>
+	<!-- End Script Source Files -->
+	@RenderSection("Scripts", required: false)
 </body>
 </html>

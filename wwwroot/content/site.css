@@ -83,7 +83,7 @@ html {
     color: white;
     background-color: transparent;
     border: none;
-   /* -moz-appearance: none;
+    /* -moz-appearance: none;
     -webkit-appearance: none;
     apperance: none;
     background: transparent;
@@ -101,6 +101,7 @@ html {
     .navbar-nav select option {
         background: rgba(0, 0, 0, 0.3);
     }
+
 select#Language {
     max-width: 50px;
     /*min-width: 50px;
@@ -114,23 +115,29 @@ select#Language {
     transition: 0.75s ease;
 }
 
-    .bg-dark.scrolled {
+    .bg-dark.scrolled,
+    .bg-dark.super {
         background: rgba(200, 200, 200, 1) !important;
+        transition: 0.75s ease;
     }
 
-        .bg-dark.scrolled li a {
+        .bg-dark.scrolled li a,
+        .bg-dark.super li a {
             color: #5b5555 !important;
         }
 
-        .bg-dark.scrolled a.active {
+        .bg-dark.scrolled a.active,
+        .bg-dark.super a.active {
             color: #4981b3 !important;
         }
 
-        .bg-dark.scrolled a:hover {
+        .bg-dark.scrolled a:hover,
+        .bg-dark.super a:hover {
             color: #4981b3 !important;
         }
 
-        .bg-dark.scrolled img {
+        .bg-dark.scrolled img,
+        .bg-dark.super img {
             filter: invert(0);
             height: 2.5rem;
             transition-property: all;
@@ -139,13 +146,15 @@ select#Language {
             transition-delay: 0s;
         }
 
-.navbar-nav.scrolled select {
-    color: #5b5555 !important;
-}
+        .navbar-nav.scrolled select,
+        .bg-dark.super select {
+            color: #5b5555 !important;
+        }
 
-    .navbar-nav.scrolled select:hover {
-        color: #4981b3 !important;
-    }
+            .navbar-nav.scrolled select:hover,
+            .bg-dark.super select:hover {
+                color: #4981b3 !important;
+            }
 
 /*============= CAROUSEL =============*/
 #carousel {
@@ -323,6 +332,16 @@ footer .svg-inline--fa {
 .socket {
     background-color: #222222;
     border-top: .1rem solid #4981b3;
+}
+
+/*============= QR Code ============*/
+
+.qr-code {
+    display: block;
+    margin-left: 0px;
+    margin-right: auto;
+    width: 200px;
+    height: 200px;
 }
 
 /*============= MEDIA QUERIES =============*/
