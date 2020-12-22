@@ -6,27 +6,29 @@ namespace KonstantinHVACweb.BusinessLogic.Models
 {
     public class Language
     {
-        public const string DefaultLanguageName = "EN";
-        public const string DefaultLanguageIsoCode = "en";
-        public const string DefaultLanguageCulture = "en-GB";
+        public const string DefaultLanguageName = "LV";
+        public const string DefaultLanguageIsoCode = "lv";
+        public const string DefaultLanguageCulture = "lv-LV";
         public const int DefaultLanguageId = 1;
 
         public static readonly List<Language> AllLanguages = new List<Language>
         {
             new Language
             {
-                Name = "EN",
-                IsoCode = "en",
-                Culture = "en-GB",
-                Id = 1
-            },
-            new Language
-            {
                 Name = "LV",
                 IsoCode = "lv",
                 Culture = "lv-LV",
+                Id = 1
+            },
+
+            new Language
+            {
+                Name = "EN",
+                IsoCode = "en",
+                Culture = "en-GB",
                 Id = 2
             },
+
             new Language
             {
                 Name = "RU",
