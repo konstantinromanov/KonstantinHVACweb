@@ -4,13 +4,12 @@ using KonstantinHVACweb.Middleware;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.StaticFiles;
+using Microsoft.AspNetCore.Rewrite;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.DependencyInjection.Extensions;
 using Microsoft.Extensions.Hosting;
 using System.Linq;
-using Microsoft.AspNetCore.Rewrite;
 
 
 namespace KonstantinHVACweb
@@ -63,9 +62,11 @@ namespace KonstantinHVACweb
             app.UseRouting();
 
             app.UseMiddleware(typeof(CookieManagementMiddleware));
+            app.UseMiddleware(typeof(LocalizationManagementMiddleware));
 
             app.UseEndpoints(endpoints =>
             {
+                endpoints.MapControllerRoute("default", "{language=xx}/{controller=Home}/{action=Index}/{id?}");
                 endpoints.MapControllerRoute("default", "{controller=Home}/{action=Index}/{id?}");
             });
         }

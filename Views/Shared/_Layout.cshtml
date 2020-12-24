@@ -81,7 +81,7 @@
 					languageIsoCode: event.target.value
 				},
 				success: (data) => {
-					location.reload();
+					location.replace(location.origin + location.pathname.replace(/[\/][a-z]{2}/m, `/${event.target.value}`));
 				}
 			});
 		});
