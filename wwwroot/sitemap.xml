@@ -1,15 +1,13 @@
-﻿@page "/sitemap.xml"
-@using Microsoft.AspNetCore.Http
-@{
-	Layout = null;
-	Response.ContentType = "text/xml";
-	await Response.WriteAsync("<?xml version='1.0' encoding='UTF-8' ?>");
-}
-
+﻿<?xml version="1.0" encoding="utf-8"?>
 
 
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-				xmlns:xhtml="http://www.w3.org/1999/xhtml">
+	 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	 xmlns:xhtml="http://www.w3.org/1999/xhtml"
+	 xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+		http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd
+		http://www.w3.org/1999/xhtml
+		http://www.w3.org/2002/08/xhtml/xhtml1-strict.xsd">
 	<url>
 		<loc>https://www.avkdizains.lv/lv</loc>
 		<xhtml:link rel="alternate"
@@ -22,8 +20,8 @@
 								hreflang="ru"
 								href="https://www.avkdizains.lv/ru" />
 	</url>
-	<loc>https://www.avkdizains.lv/en</loc>
 	<url>
+		<loc>https://www.avkdizains.lv/ru</loc>
 		<xhtml:link rel="alternate"
 								hreflang="lv"
 								href="https://www.avkdizains.lv/lv" />
@@ -34,8 +32,8 @@
 								hreflang="ru"
 								href="https://www.avkdizains.lv/ru" />
 	</url>
-	<loc>https://www.avkdizains.lv/ru</loc>
 	<url>
+		<loc>https://www.avkdizains.lv/en</loc>
 		<xhtml:link rel="alternate"
 								hreflang="lv"
 								href="https://www.avkdizains.lv/lv" />
