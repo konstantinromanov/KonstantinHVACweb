@@ -1,6 +1,11 @@
 ﻿<!DOCTYPE html>
 <html lang="@Identity.User.Language.IsoCode">
 <head>
+	@foreach (var language in Language.AllLanguages.OrderBy(z => z.Name).ToList())
+	{
+		<link rel="alternate" hreflang="@language.IsoCode" href="https://www.avkdizains.lv/@language.IsoCode" />
+	}
+	<meta name="description" content="@ViewBag.MetaDescription" />
 
 	<script async src="https://www.googletagmanager.com/gtag/js?id=G-W7KW49CKY9"></script>
 	<script>
@@ -10,8 +15,8 @@
 
 		gtag('config', 'G-W7KW49CKY9');
 	</script>
-		
-	@*<meta name="description" content=@ViewData["Content"]>*@
+
+
 
 	<meta charset="utf-8" />
 

@@ -1,0 +1,50 @@
+﻿@page "/sitemap.xml"
+@using Microsoft.AspNetCore.Http
+@{
+	Layout = null;
+	Response.ContentType = "text/xml";
+	await Response.WriteAsync("<?xml version='1.0' encoding='UTF-8' ?>");
+}
+
+
+
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+				xmlns:xhtml="http://www.w3.org/1999/xhtml">
+	<url>
+		<loc>https://www.avkdizains.lv/lv</loc>
+		<xhtml:link rel="alternate"
+								hreflang="lv"
+								href="https://www.avkdizains.lv/lv" />
+		<xhtml:link rel="alternate"
+								hreflang="en"
+								href="https://www.avkdizains.lv/en" />
+		<xhtml:link rel="alternate"
+								hreflang="ru"
+								href="https://www.avkdizains.lv/ru" />
+	</url>
+	<loc>https://www.avkdizains.lv/en</loc>
+	<url>
+		<xhtml:link rel="alternate"
+								hreflang="lv"
+								href="https://www.avkdizains.lv/lv" />
+		<xhtml:link rel="alternate"
+								hreflang="en"
+								href="https://www.avkdizains.lv/en" />
+		<xhtml:link rel="alternate"
+								hreflang="ru"
+								href="https://www.avkdizains.lv/ru" />
+	</url>
+	<loc>https://www.avkdizains.lv/ru</loc>
+	<url>
+		<xhtml:link rel="alternate"
+								hreflang="lv"
+								href="https://www.avkdizains.lv/lv" />
+		<xhtml:link rel="alternate"
+								hreflang="en"
+								href="https://www.avkdizains.lv/en" />
+		<xhtml:link rel="alternate"
+								hreflang="ru"
+								href="https://www.avkdizains.lv/ru" />
+	</url>
+</urlset>
+

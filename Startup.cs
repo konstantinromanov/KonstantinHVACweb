@@ -2,6 +2,7 @@
 using KonstantinHVACweb.BusinessLogic.Services.Interface;
 using KonstantinHVACweb.Middleware;
 using Microsoft.AspNetCore.Builder;
+using Microsoft.AspNetCore.Components.Routing;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Rewrite;
@@ -59,6 +60,7 @@ namespace KonstantinHVACweb
                 OnPrepareResponse = ctx => ctx.Context.Response.Headers.Append("Cache-Control", $"public, max-age={cachePeriod}")
             });
 
+
             app.UseRouting();
 
             app.UseMiddleware(typeof(CookieManagementMiddleware));
@@ -69,6 +71,7 @@ namespace KonstantinHVACweb
                 endpoints.MapControllerRoute("default", "{language=xx}/{controller=Home}/{action=Index}/{id?}");
                 endpoints.MapControllerRoute("default", "{controller=Home}/{action=Index}/{id?}");
             });
+            
         }
     }
 }

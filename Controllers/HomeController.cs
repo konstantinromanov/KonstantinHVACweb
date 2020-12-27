@@ -57,6 +57,7 @@ namespace KonstantinHVACweb.Controllers
                 ErrorCode = errorCode
             });
         }
+                
 
         [HttpPost]
         public JsonResult ChangeLanguage(string languageIsoCode)
