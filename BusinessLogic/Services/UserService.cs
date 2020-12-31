@@ -16,7 +16,7 @@ namespace KonstantinHVACweb.BusinessLogic.Services
             IMemoryCache memoryCache)
         {
             _httpContextAccessor = httpContextAccessor;
-            _cache = memoryCache;;
+            _cache = memoryCache;
         }
 
         public UserModel User
