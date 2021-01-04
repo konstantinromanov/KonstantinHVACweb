@@ -21,6 +21,18 @@
 								href="https://www.avkdizains.lv/ru" />
 	</url>
 	<url>
+		<loc>https://www.avkdizains.lv/lv/Home/Services</loc>
+		<xhtml:link rel="alternate"
+								hreflang="lv"
+								href="https://www.avkdizains.lv/lv/Home/Services" />
+		<xhtml:link rel="alternate"
+								hreflang="en"
+								href="https://www.avkdizains.lv/en/Home/Services" />
+		<xhtml:link rel="alternate"
+								hreflang="ru"
+								href="https://www.avkdizains.lv/ru/Home/Services" />
+	</url>	
+	<url>
 		<loc>https://www.avkdizains.lv/ru</loc>
 		<xhtml:link rel="alternate"
 								hreflang="lv"
