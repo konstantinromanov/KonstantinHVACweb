@@ -17,14 +17,14 @@
                 <li class="nav-item"><a class="nav-link @(path.Contains("contact") ? "active" : "")" href="@Url.Action("Contact","Home")" target="_self">Kontakti</a></li>
             </ul>
 
-            <ul class="navbar-nav right-nav-container px-3">
+            <div class="navbar-nav right-nav-container px-3">
                 <select class="Language language" id="Language" name="Language">
                     @foreach (var language in Language.AllLanguages.OrderBy(z => z.Name).ToList())
                     {
                         <!option value="@language.IsoCode" @(language.Id == Identity.User.Language.Id ? "selected" : "")>@language.Name</!option>
                     }
                 </select>
-            </ul>
+            </div>
         </div>
     </div>
 </nav>
