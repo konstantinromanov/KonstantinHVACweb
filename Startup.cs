@@ -44,15 +44,15 @@ namespace KonstantinHVACweb
                 app.UseHsts();
             }
 
-            {
-                app.UseRewriter(new RewriteOptions()
-                    .AddRedirectToWwwPermanent()
-                    );
-            }
+            //{
+            //    app.UseRewriter(new RewriteOptions()
+            //        .AddRedirectToWwwPermanent()
+            //        );
+            //}
 
             app.UseStatusCodePagesWithRedirects("/Home/Error?errorCode={0}");
 
-            app.UseHttpsRedirection();
+            //app.UseHttpsRedirection();
 
             var cachePeriod = env.IsDevelopment() ? "30" : "604800";
             app.UseStaticFiles(new StaticFileOptions
